@@ -1,9 +1,5 @@
 ## CrowdPose: Efficient Crowded Scenes Pose Estimation and A New Benchmark
 
-<p align='center'>
-    <img src="crowdpose.gif", width="360">
-</p>
-
 ## Citation
 If you find our works useful in your reasearch, please consider citing:
 
@@ -16,7 +12,15 @@ If you find our works useful in your reasearch, please consider citing:
 
 
 ## Introduction
-This is the official repo of **CVPR2019** paper [*CrowdPose: Efficient Crowded Scenes Pose Estimation and A New Benchmark*](https://arxiv.org/abs/1812.00324). Our proposed method surpasses the state-of-the-art methods on CrowdPose dataset by **5** mAP and results on MSCOCO dataset demonstrate the generalization ability of our method (comparatively **0.8** mAP higher). Images in our proposed CrowdPose dataset have a uniform distribution of *Crowd Index* among \[0, 1\].
+This is a fork repository of [CrowdPose](https://github.com/Jeff-sjtu/CrowdPose) with Python 3.9 compatibility.
+It does not guarantee backward compatibility.
+You can build by below command at crowdpose-api/PythonAPI directory:
+``` shell
+python3 setup.py install # option 1
+pip install . # option 2
+```
+
+Below text is the same as the original repo.
 
 ## Code
 We provide [evaluation tools](crowdpose-api) for CrowdPose dataset. Our evaluation tools is developed based on [@cocodataset/cocoapi](https://github.com/cocodataset/cocoapi). The source code of our model has been integrated into [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch).

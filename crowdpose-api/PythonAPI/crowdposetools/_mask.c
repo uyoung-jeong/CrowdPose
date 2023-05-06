@@ -12155,12 +12155,14 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   if (PyType_Ready(&__pyx_type_14crowdposetools_5_mask_RLEs) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
-  __pyx_type_14crowdposetools_5_mask_RLEs.tp_print = 0;
+  //__pyx_type_14crowdposetools_5_mask_RLEs.tp_print = 0;
+  __pyx_type_14crowdposetools_5_mask_RLEs.tp_vectorcall_offset = 0;
   if (PyObject_SetAttrString(__pyx_m, "RLEs", (PyObject *)&__pyx_type_14crowdposetools_5_mask_RLEs) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
   if (__Pyx_setup_reduce((PyObject*)&__pyx_type_14crowdposetools_5_mask_RLEs) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
   __pyx_ptype_14crowdposetools_5_mask_RLEs = &__pyx_type_14crowdposetools_5_mask_RLEs;
   if (PyType_Ready(&__pyx_type_14crowdposetools_5_mask_Masks) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
-  __pyx_type_14crowdposetools_5_mask_Masks.tp_print = 0;
+  //__pyx_type_14crowdposetools_5_mask_Masks.tp_print = 0;
+  __pyx_type_14crowdposetools_5_mask_Masks.tp_vectorcall_offset = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_14crowdposetools_5_mask_Masks.tp_dictoffset && __pyx_type_14crowdposetools_5_mask_Masks.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_14crowdposetools_5_mask_Masks.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
@@ -12744,7 +12746,8 @@ static int __Pyx_ParseOptionalKeywords(
             while (*name) {
                 int cmp = (**name == key) ? 0 :
                 #if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION >= 3
-                    (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                    //(PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :
+                    (PyUnicode_GET_LENGTH(**name) != PyUnicode_GET_LENGTH(key)) ? 1 :
                 #endif
                     PyUnicode_Compare(**name, key);
                 if (cmp < 0 && unlikely(PyErr_Occurred())) goto bad;
@@ -12760,7 +12763,8 @@ static int __Pyx_ParseOptionalKeywords(
                 while (argname != first_kw_arg) {
                     int cmp = (**argname == key) ? 0 :
                     #if !CYTHON_COMPILING_IN_PYPY && PY_MAJOR_VERSION >= 3
-                        (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+						//(PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :
+						(PyUnicode_GET_LENGTH(**argname) != PyUnicode_GET_LENGTH(key)) ? 1 :
                     #endif
                         PyUnicode_Compare(**argname, key);
                     if (cmp < 0 && unlikely(PyErr_Occurred())) goto bad;

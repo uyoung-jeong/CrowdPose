@@ -1,8 +1,6 @@
 ## CrowdPose: Efficient Crowded Scenes Pose Estimation and A New Benchmark
 
 ## Citation
-If you find our works useful in your reasearch, please consider citing:
-
     @article{li2018crowdpose,
       title={CrowdPose: Efficient Crowded Scenes Pose Estimation and A New Benchmark},
       author={Li, Jiefeng and Wang, Can and Zhu, Hao and Mao, Yihuan and Fang, Hao-Shu and Lu, Cewu},
